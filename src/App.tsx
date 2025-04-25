@@ -20,7 +20,9 @@ const availableMaps = {
     'Asia': 'custom/asia',
     'Oceania': 'custom/oceania',
     'Norway kommuner': 'countries/no/no-all-all',
-    'Norway fylker': 'countries/no/no-all'
+    'Norway fylker': 'countries/no/no-all',
+    'States of the United States': 'countries/us/us-all',
+    'United Kingdom': 'countries/gb/custom/gb-countries'
 };
 
 export function Map({ typedKeys, mapData }) {
@@ -110,7 +112,8 @@ export function TypeGame({ region }) {
             reset();
 
             return { mapData, countryMap }
-        }
+        },
+        refetchOnWindowFocus: false,
     });
 
 
